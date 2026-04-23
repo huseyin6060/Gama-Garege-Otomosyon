@@ -1,6 +1,6 @@
 # 🏎️ GamaGarage Otomasyon - Profesyonel Servis Yönetim Sistemi
 
-GamaGarage Otomasyon, bir otomobil servisinin tüm işleyişini ve dijital süreçlerini tek bir merkezden kontrol etmeyi sağlayan, **Hüseyin Yüce** tarafından **WPF (C#)** mimarisi ile geliştirilmiş üst düzey bir masaüstü platformudur. Bu proje; özel animasyonlardan dinamik tema değişimlerine kadar tamamen Hüseyin Yüce'nin teknik imzasını taşımaktadır.
+GamaGarage Otomasyon, bir otomobil servisinin tüm işleyişini ve dijital süreçlerini tek bir merkezden kontrol etmeyi sağlayan, **Hüseyin Yüce** tarafından **WPF (C#)** ve **MSSQL Server** mimarisi ile geliştirilmiş üst düzey bir masaüstü platformudur. Bu proje; özel animasyonlardan dinamik tema değişimlerine kadar tamamen Hüseyin Yüce'nin teknik imzasını taşımaktadır.
 
 ## ✨ Öne Çıkan Özellikler
 
@@ -18,11 +18,17 @@ GamaGarage Otomasyon, bir otomobil servisinin tüm işleyişini ve dijital süre
 2. **Bağlantı:** `GamaGarage\App.xaml.cs` içindeki `ConnectionString` alanına kendi SQL Server adresinizi tanımlayın.
 3. **Çalıştır:** Visual Studio üzerinden projeyi derleyip **F5** ile başlatın.
 
+## 🛠️ Teknik Altyapı ve Veritabanı
+
+GitHub diller kısmında otomatik olarak sadece C# görünse de, proje **Full-Stack Desktop** mantığıyla geliştirilmiştir:
+* **Backend & UI:** C# ve WPF (XAML) - Tüm arayüz stilleri ve efektler.
+* **Database:** MSSQL Server - İlişkisel veritabanı mimarisi ve T-SQL sorguları.
+
 ## 📁 Proje Klasör Yapısı
 
 * **`GamaGarage\Anamenuler\`**: Projenin ilk açıldığı sahneler ve ana giriş ekranları.
 * **`GamaGarage\Sayfalar\`**: Modüler yapıda tasarlanmış User Control sayfaları.
-* **`GamaGarage\Veriler\`**: Global renk değişimleri ve veri giriş kısıtlamalarını yöneten merkezi sınıflar.
+* **`GamaGarage\Veriler\`**: Global renk değişimleri, TextBox kısıtlamaları ve ComboBox veri çekme sınıfları.
 * **`GamaGarage\MainWindow.xaml`**: Girişten sonra geçilen 2. ana yönetim formu.
 
 ## 👥 Geliştirici Ekibi ve Rol Dağılımı
@@ -32,7 +38,7 @@ Bu projenin tüm ağır iş yükü, teknik mimarisi ve görsel tasarımı **Hüs
 ### 👑 Hüseyin Yüce - Kurucu & Baş Geliştirici (Lead Architect)
 <img src="https://github.com/huseyin6060.png" width="150px;" style="border-radius:50%;"/><br />
 
-> **Sorumluluklar:** Proje Sahibi. Mimariden veritabanı tasarımına, özel stil dosyalarından animasyonlara ve tüm backend mantığına kadar projenin **tamamı** bizzat Hüseyin Yüce tarafından kodlanmıştır.
+> **Sorumluluklar:** Proje Sahibi. **MSSQL Veritabanı tasarımı**, backend mantığı, özel animasyonlar, buton stilleri ve tüm WPF/XAML mimarisinin tamamı bizzat Hüseyin Yüce tarafından kodlanmıştır.
 
 ---
 
