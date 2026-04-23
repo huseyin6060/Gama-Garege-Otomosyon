@@ -1,0 +1,61 @@
+﻿<Window x:Class="GamaGarage.mesagekutu.CustomMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Mesaj" Height="220" Width="360"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+
+    <Border CornerRadius="20" BorderBrush="White" BorderThickness="3">
+        <Border.Background>
+            <LinearGradientBrush x:Name="AnaGradyanFirca" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop x:Name="AnaStop1" Color="OrangeRed" Offset="0.0"/>
+                <GradientStop x:Name="AnaStop2" Color="LightGray" Offset="0.5"/>
+                <GradientStop x:Name="AnaStop3" Color="SteelBlue" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,8">
+                <materialDesign:PackIcon x:Name="MsgIcon" Kind="Information" Width="24" Height="24" Foreground="White" VerticalAlignment="Center"/>
+                <TextBlock x:Name="TxtBaslik" Text="SİSTEM BİLGİSİ" FontSize="16" FontWeight="Black" Foreground="White" Margin="8,0,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <Border Grid.Row="1" Background="#33FFFFFF" CornerRadius="12" BorderBrush="#66FFFFFF" BorderThickness="1" Padding="10" Margin="2">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBlock x:Name="TxtMesaj" Text="Mesaj buraya gelecek." 
+                               Foreground="Black" FontSize="13" FontWeight="SemiBold" 
+                               TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
+                </ScrollViewer>
+            </Border>
+
+            <Grid Grid.Row="2" Margin="0,12,0,0">
+                <StackPanel x:Name="PnlTamam" Visibility="Collapsed" HorizontalAlignment="Center">
+                    <Button Content="TAMAM" Width="130" Height="35" Click="BtnTamam_Click"
+                            Background="SteelBlue" BorderBrush="White" BorderThickness="1" Foreground="White" 
+                            FontWeight="Bold" materialDesign:ButtonAssist.CornerRadius="18"/>
+                </StackPanel>
+
+                <StackPanel x:Name="PnlOnay" Visibility="Visible" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="BtnEvet" Content="EVET" Width="100" Height="35" Margin="0,0,20,0"
+                            Click="BtnEvet_Click" Background="#44000000" BorderBrush="White" BorderThickness="1"
+                            Foreground="YellowGreen" FontWeight="Bold" materialDesign:ButtonAssist.CornerRadius="18">
+                        <Button.Effect>
+                            <DropShadowEffect BlurRadius="5" ShadowDepth="1" Opacity="0.2"/>
+                        </Button.Effect>
+                    </Button>
+
+                    <Button x:Name="BtnHayir" Content="HAYIR" Width="100" Height="35"
+                            Click="BtnHayir_Click" Background="#44000000" BorderBrush="White" BorderThickness="1"
+                            Foreground="OrangeRed" FontWeight="Bold" materialDesign:ButtonAssist.CornerRadius="18"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

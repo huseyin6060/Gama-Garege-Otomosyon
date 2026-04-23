@@ -1,0 +1,62 @@
+﻿<Window x:Class="GamaGarage.Anamenuler.ButonYetkiPenceresi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Buton Yetki Ayarları" Height="550" Width="380"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        WindowStartupLocation="CenterOwner">
+
+    <Border CornerRadius="25" BorderBrush="#66FFFFFF" BorderThickness="1.5">
+        <Border.Background>
+            <LinearGradientBrush x:Name="AnaGradyanFirca" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop x:Name="AnaStop1" Color="OrangeRed" Offset="0.0"/>
+                <GradientStop x:Name="AnaStop2" Color="LightGray" Offset="0.5"/>
+                <GradientStop x:Name="AnaStop3" Color="SteelBlue" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Margin="0,0,0,15">
+                <materialDesign:PackIcon Kind="ShieldLock" HorizontalAlignment="Center" Width="45" Height="45" Foreground="White">
+                    <materialDesign:PackIcon.Effect>
+                        <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.5"/>
+                    </materialDesign:PackIcon.Effect>
+                </materialDesign:PackIcon>
+                <TextBlock Text="ERİŞİM KISITLAMA" HorizontalAlignment="Center" FontSize="20" FontWeight="Black" Foreground="White"/>
+                <TextBlock Text="Pasif olmasını istediğiniz butonları seçin" FontSize="12" HorizontalAlignment="Center" Foreground="#EEEEEE" Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <Border Grid.Row="1" Background="#44FFFFFF" CornerRadius="15" Padding="10">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True">
+                    <StackPanel Margin="10,5">
+                        <CheckBox x:Name="chkPersonel" Content="Personel Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                        <CheckBox x:Name="chkMusteri" Content="Müşteri Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                        <CheckBox x:Name="chkStok" Content="Stok Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                        <CheckBox x:Name="chkKasa" Content="Kasa Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                        <CheckBox x:Name="chkCekSenet" Content="Çek/Senet Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                        <CheckBox x:Name="chkRandevu" Content="Randevu Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                        <CheckBox x:Name="chkMuhasebe" Content="Muhasebe Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                        <CheckBox x:Name="chkUrunler" Content="Ürünler Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                        <CheckBox x:Name="chkFirmalar" Content="Firmalar Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                        <CheckBox x:Name="chkGrafikler" Content="Grafikler Panelini Kilitle" Margin="0,7" Foreground="Black" FontWeight="SemiBold"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+            <Button Grid.Row="2" x:Name="btnYetkiTamam" Click="btnYetkiTamam_Click" 
+                    Content="YETKİLERİ BELİRLE" Margin="0,20,0,0"
+                    Height="50" materialDesign:ButtonAssist.CornerRadius="25"
+                    Background="#D32F2F" BorderBrush="Transparent" Foreground="White" FontSize="18" FontWeight="Bold">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="2" Opacity="0.3"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

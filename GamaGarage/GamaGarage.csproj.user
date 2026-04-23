@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Anamenuler\Anamenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Anamenuler\GirisEkrani.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Anamenuler\KayitEkrani.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Anamenuler\YedeklemeEkrani.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="mesagekutu\AdminOnayPenceresi.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="mesagekutu\ArabaYukleme.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="mesagekutu\ButonYetkiPenceresi.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="mesagekutu\CustomMessageBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="mesagekutu\SoruEkrani.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\Ayarlar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\CekSenet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\Detay.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\Firmalar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\GrafiklerSayfasi.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\Kasa.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\Muhasebe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\MusteriDetay.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\MusteriSayfasi.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\PersonelSayfasi.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\Randevu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\Stok.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sayfalar\Urunler.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

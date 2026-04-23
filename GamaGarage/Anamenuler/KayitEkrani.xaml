@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="GamaGarage.Anamenuler.KayitEkrani"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" d:DesignHeight="750" d:DesignWidth="550">
+
+    <Viewbox Stretch="Uniform" StretchDirection="Both">
+        <Grid>
+            <Border Background="Transparent" CornerRadius="20" Padding="20">
+                <StackPanel Width="380">
+                    <TextBlock Text="GAMACILAR" HorizontalAlignment="Center" FontSize="26" FontWeight="Black" Foreground="Black"/>
+                    <TextBlock Text="OTO SERVİS OTOMASYONU" HorizontalAlignment="Center" FontSize="16" Foreground="Black" Margin="0,5,0,10"/>
+
+                    <Grid HorizontalAlignment="Center" Margin="0,0,0,5">
+                        <Ellipse x:Name="ellFoto" Width="85" Height="85" Stroke="SteelBlue" StrokeThickness="3" 
+                                 MouseDown="imgKayıtFoto_MouseDown" Cursor="Hand">
+                            <Ellipse.Fill>
+                                <ImageBrush x:Name="imgKayıtFoto" Stretch="UniformToFill"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <materialDesign:PackIcon Kind="CameraPlus" Width="25" Height="25" Foreground="SteelBlue" 
+                                                 VerticalAlignment="Bottom" HorizontalAlignment="Right" IsHitTestVisible="False"/>
+                    </Grid>
+
+                   <TextBox x:Name="txtKayitKadi" materialDesign:HintAssist.Hint="Kullanıcı Adı Belirleyin" 
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}" 
+                             Margin="0,5,0,5" Background="White" materialDesign:TextFieldAssist.TextFieldCornerRadius="15" />
+
+                   <DatePicker x:Name="dpKayitTarih" Background="White" Foreground="Black"
+                                Style="{StaticResource MaterialDesignOutlinedDatePicker}" 
+                                materialDesign:TextFieldAssist.TextFieldCornerRadius="15" 
+                                materialDesign:HintAssist.Hint="İşlem Tarihi" Margin="0,5,0,5"
+                                materialDesign:TextFieldAssist.UnderlineBrush="Transparent" BorderBrush="SteelBlue"/>
+
+
+
+
+
+
+                    <Grid Margin="0,5,0,5" Height="50">
+                        <PasswordBox x:Name="txtKayitSifre"  materialDesign:HintAssist.Hint="Şifre Belirleyin"   Style="{StaticResource MaterialDesignOutlinedPasswordBox}" 
+                                         Background="White" materialDesign:TextFieldAssist.TextFieldCornerRadius="15"    VerticalContentAlignment="Center" Padding="10,0,45,0"/>
+
+                        <TextBox x:Name="txtSifreAcik"
+             materialDesign:HintAssist.Hint="Şifre Belirleyin!!" 
+             Style="{StaticResource MaterialDesignOutlinedTextBox}" 
+             Background="White" 
+             materialDesign:TextFieldAssist.TextFieldCornerRadius="15"
+             VerticalContentAlignment="Center"
+             Padding="10,0,45,0"
+             Visibility="Collapsed"
+             IsReadOnly="True"/>
+
+                        <ToggleButton x:Name="btnSifreGoster"
+                  Style="{StaticResource MaterialDesignActionToggleButton}"
+                  Content="{materialDesign:PackIcon Kind=EyeOff}"
+                  materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=Eye}"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Center"
+                  Margin="0,0,8,0"
+                  Width="35" Height="35"
+                  Background="Transparent" 
+                  BorderBrush="Transparent"
+                  Foreground="#777777"
+                  PreviewMouseDown="btnSifreGoster_PreviewMouseDown"
+                  PreviewMouseUp="btnSifreGoster_PreviewMouseUp"/>
+                    </Grid>
+
+
+
+
+
+
+
+                    <ComboBox x:Name="cmbYetki" materialDesign:HintAssist.Hint="Yetki Seviyesi (İstediğiniz bir şey yazarsanız sisteme eklenir) " Style="{StaticResource MaterialDesignOutlinedComboBox}" Margin="0,5,0,5" materialDesign:TextFieldAssist.TextFieldCornerRadius="15" IsEditable="True" Background="White">
+                       
+                    </ComboBox>
+
+
+
+                    <Button x:Name="btnKaydet" Click="btnKaydet_Click" Content="KAYIT ET" 
+                            Height="55" Margin="0,15,0,0" materialDesign:ButtonAssist.CornerRadius="25"
+                            Background="Transparent" BorderBrush="Black" BorderThickness="2" 
+                            Foreground="Black" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Viewbox>
+</UserControl>

@@ -1,0 +1,75 @@
+﻿<Window x:Class="GamaGarage.mesagekutu.AdminOnayPenceresi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Yönetici Onayı" Height="400" Width="350"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        WindowStartupLocation="CenterOwner">
+
+    <Border CornerRadius="25" BorderBrush="White" BorderThickness="3">
+        <Border.Background>
+            <LinearGradientBrush x:Name="AnaGradyanFirca" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop x:Name="AnaStop1" Color="OrangeRed" Offset="0.0"/>
+                <GradientStop x:Name="AnaStop2" Color="LightGray" Offset="0.5"/>
+                <GradientStop x:Name="AnaStop3" Color="SteelBlue" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Margin="0,0,0,15">
+                <materialDesign:PackIcon Kind="ShieldCheck" HorizontalAlignment="Center" Width="45" Height="45" Foreground="White">
+                    <materialDesign:PackIcon.Effect>
+                        <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.5"/>
+                    </materialDesign:PackIcon.Effect>
+                </materialDesign:PackIcon>
+                <TextBlock Text="YÖNETİCİ ONAYI" HorizontalAlignment="Center" FontSize="20" FontWeight="Black" Foreground="White"/>
+                <TextBlock Text="Devam etmek için yönetici girişi yapın" FontSize="11" HorizontalAlignment="Center" Foreground="#EEEEEE" Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <Border Grid.Row="1" Background="#44FFFFFF" CornerRadius="15" Padding="20" VerticalAlignment="Center" BorderBrush="#66FFFFFF" BorderThickness="1">
+                <StackPanel>
+                    <TextBox x:Name="txtAdminKadi" 
+                             materialDesign:HintAssist.Hint="Yönetici Kullanıcı Adı" 
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Foreground="Black" FontSize="14" FontWeight="SemiBold" Margin="0,0,0,15"
+                             CaretBrush="Black" SelectionBrush="SteelBlue"/>
+
+                    <PasswordBox x:Name="txtAdminSifre" 
+                                 materialDesign:HintAssist.Hint="Yönetici Şifresi" 
+                                 Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                                 Foreground="Black" FontSize="14" FontWeight="SemiBold"/>
+                </StackPanel>
+            </Border>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+
+                <Button x:Name="btnIptal" Click="btnIptal_Click"
+                        Content="İPTAL" Width="130" Height="45" Margin="0,0,10,0"
+                        Background="#44000000" BorderBrush="White" BorderThickness="1" 
+                        Foreground="OrangeRed" FontWeight="Bold" 
+                        materialDesign:ButtonAssist.CornerRadius="22">
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="5" ShadowDepth="1" Opacity="0.2"/>
+                    </Button.Effect>
+                </Button>
+
+                <Button x:Name="btnOnayla" Click="btnOnayla_Click" 
+                        Content="ONAYLA" Width="130" Height="45"
+                        Background="#44000000" BorderBrush="White" BorderThickness="1" 
+                        Foreground="YellowGreen" FontWeight="Bold" 
+                        materialDesign:ButtonAssist.CornerRadius="22">
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="8" ShadowDepth="2" Opacity="0.3"/>
+                    </Button.Effect>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

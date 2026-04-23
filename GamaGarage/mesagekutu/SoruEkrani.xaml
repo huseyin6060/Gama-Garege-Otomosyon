@@ -1,0 +1,62 @@
+﻿<Window x:Class="GamaGarage.mesagekutu.SoruEkrani"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="İşlem Durumu" Height="200" Width="380" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+
+    <Border BorderBrush="White" BorderThickness="3" CornerRadius="20">
+        <Border.Background>
+            <LinearGradientBrush x:Name="AnaGradyanFirca" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop x:Name="AnaStop1" Color="OrangeRed" Offset="0.0"/>
+                <GradientStop x:Name="AnaStop2" Color="LightGray" Offset="0.5"/>
+                <GradientStop x:Name="AnaStop3" Color="SteelBlue" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,5">
+                <materialDesign:PackIcon Kind="QuestionAnswer" Width="24" Height="24" Foreground="White" VerticalAlignment="Center"/>
+                <TextBlock Text="İŞLEM TİPİNİ SEÇİN" FontSize="18" FontWeight="Black" Foreground="White" Margin="10,0,0,0" VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="4" ShadowDepth="1" Opacity="0.4"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5">
+
+                <Button Name="btnSimdi" Content="ŞİMDİ" Width="95" Height="40" Margin="5"
+                        Click="btn_Click" Background="#44000000" BorderBrush="White" BorderThickness="1"
+                        Foreground="Red" FontWeight="Bold" materialDesign:ButtonAssist.CornerRadius="18">
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="5" ShadowDepth="1" Opacity="0.2"/>
+                    </Button.Effect>
+                </Button>
+
+                <Button Name="btnRezerve" Content="REZERVE" Width="95" Height="40" Margin="5"
+                        Click="btn_Click" Background="#44000000" BorderBrush="White" BorderThickness="1"
+                        Foreground="Orange" FontWeight="Bold" materialDesign:ButtonAssist.CornerRadius="18">
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="5" ShadowDepth="1" Opacity="0.2"/>
+                    </Button.Effect>
+                </Button>
+
+                <Button Name="btnIptal" Content="VAZGEÇ" Width="95" Height="40" Margin="5"
+                        Click="btn_Click" Background="#44000000" BorderBrush="White" BorderThickness="1"
+                        Foreground="YellowGreen" FontWeight="Bold" materialDesign:ButtonAssist.CornerRadius="18">
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="5" ShadowDepth="1" Opacity="0.2"/>
+                    </Button.Effect>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

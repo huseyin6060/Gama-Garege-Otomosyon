@@ -1,0 +1,108 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <System:Double x:Key="ButtonHeight">45</System:Double>
+    <System:Double x:Key="MenuWidth">200</System:Double>
+    <CornerRadius x:Key="StandardCornerRadius">18</CornerRadius>
+    <CornerRadius x:Key="InputCornerRadius">12</CornerRadius>
+    <CornerRadius x:Key="WindowCornerRadius">25</CornerRadius>
+
+    <SolidColorBrush x:Key="GamaAnaRenk" Color="#ea4470"/>
+    <SolidColorBrush x:Key="GamaIkincilRenk" Color="#5488c4"/>
+    <SolidColorBrush x:Key="GamaArkaPlan" Color="#491515"/>
+    <SolidColorBrush x:Key="GamaSefafSiyah" Color="#44000000"/>
+    <SolidColorBrush x:Key="GamaBeyaz" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="GamaYaziRengi" Color="#000000"/>
+
+    <SolidColorBrush x:Key="1" Color="#0B0C10"/>
+    <SolidColorBrush x:Key="2" Color="#121212"/>
+    <SolidColorBrush x:Key="3" Color="#1F2833"/>
+    <SolidColorBrush x:Key="4" Color="#212121"/>
+    <SolidColorBrush x:Key="5" Color="#00BFFF"/>
+    <SolidColorBrush x:Key="6" Color="#4682B4"/>
+    <SolidColorBrush x:Key="7" Color="#274472"/>
+    <SolidColorBrush x:Key="8" Color="#50C878"/>
+    <SolidColorBrush x:Key="9" Color="#00A86B"/>
+    <SolidColorBrush x:Key="10" Color="#D2042D"/>
+    <SolidColorBrush x:Key="11" Color="#E0115F"/>
+    <SolidColorBrush x:Key="12" Color="#D4AF37"/>
+    <SolidColorBrush x:Key="13" Color="#C0C0C0"/>
+
+    <SolidColorBrush x:Key="Brush_SilverChrome" Color="#C0C0C0"/>
+    <SolidColorBrush x:Key="Brush_DeepOcean" Color="#1F2833"/>
+
+    <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="Height" Value="{StaticResource ButtonHeight}"/>
+        <Setter Property="Background" Value="{StaticResource GamaSefafSiyah}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GamaBeyaz}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="{StaticResource GamaBeyaz}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="materialDesign:ButtonAssist.CornerRadius" Value="{StaticResource StandardCornerRadius}"/>
+    </Style>
+
+    <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
+        <Setter Property="materialDesign:TextFieldAssist.TextFieldCornerRadius" Value="{StaticResource InputCornerRadius}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GamaIkincilRenk}"/>
+        <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="PasswordBox" BasedOn="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+        <Setter Property="materialDesign:TextFieldAssist.TextFieldCornerRadius" Value="{StaticResource InputCornerRadius}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GamaIkincilRenk}"/>
+        <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="GamaWindowBorder" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{StaticResource GamaBeyaz}"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="CornerRadius" Value="{StaticResource WindowCornerRadius}"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="{Binding Color, Source={StaticResource GamaAnaRenk}}" Offset="0.0"/>
+                    <GradientStop Color="{Binding Color, Source={StaticResource Brush_SilverChrome}}" Offset="0.5"/>
+                    <GradientStop Color="{Binding Color, Source={StaticResource Brush_DeepOcean}}" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CustomCalendarDayButton" TargetType="CalendarDayButton" BasedOn="{StaticResource MaterialDesignCalendarDayButton}">
+        <Setter Property="materialDesign:CalendarAssist.SelectionColor" Value="Orange" />
+        <Setter Property="materialDesign:CalendarAssist.SelectionForegroundColor" Value="{StaticResource GamaYaziRengi}" />
+    </Style>
+
+    <Style x:Key="CustomCalendarButton" TargetType="CalendarButton" BasedOn="{StaticResource MaterialDesignCalendarButton}">
+        <Setter Property="materialDesign:CalendarAssist.SelectionColor" Value="Orange" />
+        <Setter Property="materialDesign:CalendarAssist.SelectionForegroundColor" Value="{StaticResource GamaYaziRengi}" />
+    </Style>
+
+    <Style x:Key="CustomCalendar" TargetType="{x:Type Calendar}" BasedOn="{StaticResource MaterialDesignDatePickerCalendarPortrait}">
+        <Setter Property="Background" Value="{StaticResource Brush_SilverChrome}" />
+        <Setter Property="CalendarButtonStyle" Value="{StaticResource CustomCalendarButton}" />
+        <Setter Property="CalendarDayButtonStyle" Value="{StaticResource CustomCalendarDayButton}" />
+        <Setter Property="Foreground" Value="{StaticResource GamaBeyaz}" />
+        <Setter Property="materialDesign:CalendarAssist.HeaderBackground" Value="{StaticResource Brush_DeepOcean}" />
+        <Setter Property="materialDesign:CalendarAssist.HeaderForeground" Value="{StaticResource GamaBeyaz}" />
+    </Style>
+
+    <Style TargetType="DatePicker" BasedOn="{StaticResource MaterialDesignOutlinedDatePicker}">
+        <Setter Property="CalendarStyle" Value="{StaticResource CustomCalendar}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="10,0" />
+        <Setter Property="Height" Value="55" />
+        <Setter Property="materialDesign:TextFieldAssist.TextFieldCornerRadius" Value="15" />
+        <Setter Property="materialDesign:HintAssist.IsFloating" Value="True" />
+    </Style>
+
+    <Style TargetType="FrameworkElement" x:Key="ChartFont">
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource MaterialDesignFont}" />
+        <Setter Property="TextBlock.FontSize" Value="12" />
+    </Style>
+
+</ResourceDictionary>

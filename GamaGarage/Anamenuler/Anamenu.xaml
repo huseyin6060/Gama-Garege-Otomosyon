@@ -1,0 +1,83 @@
+﻿<Window x:Class="GamaGarage.Anamenuler.Anamenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Gama Garage | Giriş Paneli" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        FontFamily="{materialDesign:MaterialDesignFont}">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush x:Name="AnaGradyanFirca" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop x:Name="AnaStop1" Color="OrangeRed" Offset="0.0"/>
+                <GradientStop x:Name="AnaStop2" Color="LightGray" Offset="0.5"/>
+                <GradientStop x:Name="AnaStop3" Color="SteelBlue" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Margin="12" CornerRadius="25" Background="#44FFFFFF" BorderBrush="#66FFFFFF" BorderThickness="1">
+                <Grid Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="GAMA GARAGE" HorizontalAlignment="Center" Margin="0,30" 
+                               FontSize="18" FontWeight="Black" Foreground="White"/>
+
+                    <StackPanel Grid.Row="1" Margin="10,0,10,10" VerticalAlignment="Center">
+                        <Button x:Name="BtnGiris" Click="BtnGiris_Click" Style="{StaticResource MaterialDesignRaisedButton}" Height="60" Width="190" materialDesign:ButtonAssist.CornerRadius="30" Margin="0,10" Background="SteelBlue" BorderBrush="Transparent" Foreground="Black">
+                            <Grid HorizontalAlignment="Left" Width="160">
+                                <materialDesign:PackIcon Kind="Login" VerticalAlignment="Center" HorizontalAlignment="Left" Width="24" Height="24"/>
+                                <TextBlock Text="GİRİŞ" Margin="40,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" />
+                            </Grid>
+                        </Button>
+
+                        <Button x:Name="BtnKayıt" Click="BtnKayıt_Click" Style="{StaticResource MaterialDesignRaisedButton}" Height="60" Width="190" materialDesign:ButtonAssist.CornerRadius="30" Margin="0,10" Background="SteelBlue" BorderBrush="Transparent" Foreground="Black">
+                            <Grid HorizontalAlignment="Left" Width="160">
+                                <materialDesign:PackIcon Kind="AccountPlus" VerticalAlignment="Center" HorizontalAlignment="Left" Width="24" Height="24"/>
+                                <TextBlock Text="KAYIT" Margin="40,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14"/>
+                            </Grid>
+                        </Button>
+
+                        <Button x:Name="BtnYedekal" Click="BtnYedekal_Click" Style="{StaticResource MaterialDesignRaisedButton}" Height="60" Width="190" materialDesign:ButtonAssist.CornerRadius="30" Margin="0,10" Background="SteelBlue" BorderBrush="Transparent" Foreground="Black">
+                            <Grid HorizontalAlignment="Left" Width="160">
+                                <materialDesign:PackIcon Kind="DatabaseSync" VerticalAlignment="Center" HorizontalAlignment="Left" Width="24" Height="24"/>
+                                <TextBlock Text="YEDEKLEME" Margin="40,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14"/>
+                            </Grid>
+                        </Button>
+
+                        <Separator Margin="15,20" Background="White" Opacity="0.5"/>
+
+                        <Button Click="BtnCikis_Click" Style="{StaticResource MaterialDesignRaisedButton}" Height="50" Width="190" materialDesign:ButtonAssist.CornerRadius="25" Margin="0,3" Background="#D32F2F" BorderBrush="Transparent" Foreground="Black">
+                            <Grid HorizontalAlignment="Left" Width="160">
+                                <materialDesign:PackIcon Kind="Power" VerticalAlignment="Center" HorizontalAlignment="Left" Width="28" Height="28"/>
+                                <TextBlock Text="Kapat" Margin="40,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14"/>
+                            </Grid>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="1" Margin="10,12,12,12" CornerRadius="25" Background="#22FFFFFF" BorderBrush="#33FFFFFF" BorderThickness="1">
+                <Grid>
+                    <Image x:Name="AnaLogo" Source="/Assets/aıdajk.png" Width="300" Height="300" 
+                           HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.6">
+                        <Image.Effect>
+                            <DropShadowEffect ShadowDepth="0" Color="Black" BlurRadius="20"/>
+                        </Image.Effect>
+                    </Image>
+
+                    <ContentControl x:Name="AnamenuIcerik" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

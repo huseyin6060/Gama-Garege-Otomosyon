@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="GamaGarage.Anamenuler.YedeklemeEkrani"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="600">
+
+    <Viewbox Stretch="Uniform">
+        <Grid>
+            <Border Background="Transparent" CornerRadius="20" Padding="20">
+                <StackPanel Width="450">
+                    <TextBlock Text="VERİTABANI YÖNETİMİ" HorizontalAlignment="Center" FontSize="24" FontWeight="Black" Foreground="Black" Margin="0,0,0,10"/>
+                    <TextBlock Text="Yedekleme ve Geri Yükleme İşlemleri" HorizontalAlignment="Center" FontSize="14" Foreground="#555" Margin="0,0,0 , 30"/>
+
+                    <Border Background="#11000000" CornerRadius="15" Padding="15" Margin="0,0,0,20">
+                        <StackPanel>
+                            <TextBlock Text="UYARI: Veritabanı yedeği tarih damgasıyla kaydedilecektir." 
+                                       FontSize="11" TextWrapping="Wrap" TextAlignment="Center" Foreground="DarkRed" Margin="0,0,0,10" FontWeight="Bold"/>
+
+                            <Button Click="BtnYedekAl_Click" Height="70" materialDesign:ButtonAssist.CornerRadius="15" 
+                                    Background="SteelBlue" BorderBrush="Transparent" Foreground="White">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="DatabaseExport" Width="30" Height="30" VerticalAlignment="Center"/>
+                                    <TextBlock Text="YEDEK AL (BACKUP)" Margin="15,0,0,0" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#11000000" CornerRadius="15" Padding="15">
+                        <StackPanel>
+                            <TextBlock Text="UYARI: Geri yükleme işlemi mevcut verilerin üzerine yazabilir!" 
+                                       FontSize="11" TextWrapping="Wrap" TextAlignment="Center" Foreground="DarkRed" Margin="0,0,0,10" FontWeight="Bold"/>
+
+                            <Button Click="BtnYedekYukle_Click" Height="70" materialDesign:ButtonAssist.CornerRadius="15" 
+                                    Background="OrangeRed" BorderBrush="Transparent" Foreground="White">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="DatabaseImport" Width="30" Height="30" VerticalAlignment="Center"/>
+                                    <TextBlock Text="YEDEK YÜKLE (RESTORE)" Margin="15,0,0,0" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Viewbox>
+</UserControl>
