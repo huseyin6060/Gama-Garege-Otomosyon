@@ -1,44 +1,48 @@
-# 🏎️ GamaGarage - Profesyonel Oto Servis Yönetim Sistemi (WPF)
+# 🏎️ GamaGarage Otomasyon - Profesyonel Servis Yönetim Sistemi
 
-GamaGarage, bir otomobil servisinin randevu, stok ve müşteri yönetimini masaüstü üzerinden modernize eden kapsamlı bir **WPF (C#)** uygulamasıdır. Projenin fikir aşamasından, veritabanı mimarisine ve arayüz kodlamasına kadar tüm süreçler **Hüseyin Yüce** tarafından yönetilmiştir.
+GamaGarage Otomasyon, bir otomobil servisinin tüm işleyişini ve dijital süreçlerini tek bir merkezden kontrol etmeyi sağlayan, **Hüseyin Yüce** tarafından **WPF (C#)** mimarisi ile geliştirilmiş üst düzey bir masaüstü platformudur.
 
 ## ✨ Öne Çıkan Özellikler
 
-* **💻 Dinamik Ana Menü:** Uygulama açılışında kullanıcıyı karşılayan, hızlı erişim odaklı modern ana sayfa.
-* **🗨️ User Control Mesaj Sistemi:** Kullanıcı deneyimini artıran, özel tasarım bildirim ve uyarı pencereleri.
-* **📊 SQL Veri Entegrasyonu:** MSSQL Server altyapısı ile ilişkisel ve güvenli veri depolama.
-* **🛠️ Servis Modülleri:** Randevu takibi, ekip yönetimi ve müşteri geri bildirimlerinin anlık kontrolü.
+* **💻 Dinamik Masaüstü Kontrolü:** Tamamen özelleştirilmiş, hızlı ve modern kullanıcı arayüzü.
+* **🗨️ Gelişmiş Bildirim Sistemi:** Kullanıcı deneyimini odağa alan, özel tasarım mesaj ve uyarı yapıları.
+* **📊 Veri Yönetim Merkezi:** Arka planda MSSQL Server ile çalışan, yüksek güvenlikli veri işleme kapasitesi.
+* **🛠️ Operasyonel Takip:** Servis süreçlerinin aksamadan ilerlemesini sağlayan teknik altyapı.
 
-## 🚀 Kurulum ve Çalıştırma
+## 🚀 Kurulum ve Yapılandırma
 
 1. **Veritabanı:** SQL Server üzerinde `GamaGarage` adında bir veritabanı oluşturun ve `/Database/GamaGarage.sql` dosyasını çalıştırın.
-2. **SQL Bağlantısı:** `App.xaml.cs` dosyasındaki `ConnectionString` bölümüne kendi yerel SQL Server bilgilerinizi girin.
-3. **Başlat:** Visual Studio ile projeyi açın, derleyin ve **F5** ile çalıştırın.
+2. **Bağlantı:** `App.xaml.cs` içindeki `ConnectionString` alanına kendi SQL Server adresinizi tanımlayın.
+3. **Çalıştır:** Visual Studio üzerinden projeyi derleyip **F5** ile başlatın.
 
-## 👥 Geliştirici Ekibi ve Rol Dağılımı
+## 🛠️ Teknik Altyapı
 
-Bu projenin tüm ağırlığı ve teknik sorumluluğu tamamen **Hüseyin Yüce** üzerindedir.
+* **Çekirdek:** C#, .NET Framework / .NET Core.
+* **Arayüz:** WPF (Windows Presentation Foundation), XAML.
+* **Veritabanı:** MSSQL Server & Entity Framework.
+
+## 👥 Proje Lideri ve Geliştirme Ekibi
+
+Bu projenin tüm ağır iş yükü ve mimari kararları **Hüseyin Yüce** tarafından yürütülmüştür.
 
 ### 👑 Hüseyin Yüce - Lead Developer & Architect
+<img src="https://github.com/huseyin6060.png" width="150px;" style="border-radius:50%;"/><br />
 
-| ![Hüseyin Yüce'nin Fotoğrafı](Görseldeki_Kendi_Resmin.png) |
-| :---: |
-
-> **Katkıları:** Proje Sahibi. Projenin **tamamı** Hüseyin Yüce tarafından kodlanmıştır. Yazılım mimarisi, SQL veritabanı tasarımı, Backend (C#) mantığı ve User Control mesaj yapılarının tamamı bizzat bizzat kendisi tarafından geliştirilmiştir.
+> **Sorumluluklar:** Projenin tek hakimi ve ana geliştiricisi. Veritabanı mimarisi, backend mantığı ve tüm WPF tasarımları bizzat Hüseyin Yüce tarafından kodlanmıştır.
 
 ---
 
 ### 🛠️ Adahan Karadeniz - Technical Assistant
+<img src="https://github.com/VabisBey52.png" width="150px;" style="border-radius:50%;"/><br />
 
-> **Katkıları:** Kodlama süreçlerinde bazı modüllerin teknik testlerinde ve dokümantasyon süreçlerinde teknik destek sağlamıştır.
+> **Sorumluluklar:** Teknik destek, dokümantasyon ve modül test süreçlerinde yardımcı olmuştur.
 
 ---
 
-### 🎨 Buğrahan Yılmaz - QA Beta Tester
+### 🎨 Buğrahan Yılmaz - QA Tester
+> **Sorumluluklar:** Yazılımın test aşamalarında ve kullanıcı geri bildirim süreçlerinde destek sağlamıştır.
 
-> **Katkıları:** Yazılımın test süreçlerinde hata raporlama ve kullanıcı arayüzü geri bildirimleri ile destek vermiştir.
+## 📜 Lisans ve Kullanım Şartları
 
-## 📜 Lisans
-
-Bu proje **GNU General Public License v3.0** ile korunmaktadır.
-⚠️ **ÖNEMLİ:** Bu yazılım Hüseyin Yüce tarafından eğitim amaçlı geliştirilmiştir. **TİCARİ AMAÇLA SATILMASI VEYA PARALI DAĞITILMASI KESİNLİKLE YASAKTIR.**
+Bu proje **GNU General Public License v3.0** ile korunmaktadır. 
+⚠️ **TİCARİ KULLANIM YASAĞI:** Bu yazılım Hüseyin Yüce'nin emeğidir. **KESİNLİKLE SATILAMAZ VE TİCARİ AMAÇLA DAĞITILAMAZ.**
